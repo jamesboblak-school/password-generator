@@ -27,47 +27,57 @@ var newPass = [];
 // console.log(passDigits);
 
 function generatePassword() {
-var passDigits = prompt("How many digits would you like (8-72?")
-var capSelect = confirm("Would you like to use uppercase letters?");
-var noCapSelect = confirm("Would you like to use lowercase letters?");
-var numSelect = confirm("Would you like to use numbers?");
-var specSelect = confirm("Would you like to use special characters?");
-if (capSelect === true) {
-  passChars = passChars.concat(capChars);
-}
-if (noCapSelect === true) {
-  passChars = passChars.concat(nocapChars);
-}
-if (numSelect === true) {
-  passChars = passChars.concat(numChars);
-}
-if (specSelect === true) {
-  passChars = passChars.concat(specChars);
-}
-  for (i = 0; i < passDigits; i++) {
-    var randomChar = passChars[Math.floor(Math.random()*passChars.length)];
-    newPass.push(randomChar)
-    console.log(randomChar);
+  var passDigits = prompt("How many digits would you like?")
+  var capSelect = confirm("Would you like to use uppercase letters?");
+  var noCapSelect = confirm("Would you like to use lowercase letters?");
+  var numSelect = confirm("Would you like to use numbers?");
+  var specSelect = confirm("Would you like to use special characters?");
+  if (capSelect === true) {
+    passChars = passChars.concat(capChars);
   }
+  if (noCapSelect === true) {
+    passChars = passChars.concat(nocapChars);
+  }
+  if (numSelect === true) {
+    passChars = passChars.concat(numChars);
+  }
+  if (specSelect === true) {
+    passChars = passChars.concat(specChars);
+  }
+  for (i = 0; i < passDigits; i++) {
+    var randomChar = passChars[Math.floor(Math.random() * passChars.length)];
+    newPass.push(randomChar);
+    console.log(randomChar);
+
+  }
+  console.log(newPass);
+  newPass = newPass.join("");
+  console.log(newPass);
+  return newPass;
+
 }
 
-// Run the generatePassword function
-generatePassword();
-
-// Removes commas from output
-var newPassword = newPass.join("");
-alert(newPassword + " is your new password!")
-
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  // passwordText.value = password;
-  passwordText.value = newPassword;
-
+  passwordText.value = password;
+  // passwordText.value = newPassword;
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// Removes commas from output
+//alert(newPassword + " is your new password!")
+
+
+
+
+
+
+
+
+// Run the generatePassword function
+// generatePassword();
