@@ -31,7 +31,7 @@ if (specSelect === true) {
 // console.log(passChars);
 // console.log(passDigits);
 
-function makePassword() {
+function generatePassword() {
   for (i = 0; i < passDigits; i++) {
     var randomChar = passChars[Math.floor(Math.random()*passChars.length)];
     newPass.push(randomChar)
@@ -39,7 +39,7 @@ function makePassword() {
   }
 }
 
-makePassword();
+generatePassword();
 var newPassword = newPass.join("");
 alert(newPassword + " is your new password!")
 
@@ -48,7 +48,8 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  // passwordText.value = password;
+  passwordText.value = newPassword;
 
 }
 
