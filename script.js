@@ -10,6 +10,12 @@ var passChars = [];
 var newPass = [];
 
 // User questions
+
+
+// console.log(passChars);
+// console.log(passDigits);
+
+function generatePassword() {
 var passDigits = prompt("How many digits would you like (8-72?")
 var capSelect = confirm("Would you like to use uppercase letters?");
 var noCapSelect = confirm("Would you like to use lowercase letters?");
@@ -27,11 +33,6 @@ if (numSelect === true) {
 if (specSelect === true) {
   passChars = passChars.concat(specChars);
 }
-
-// console.log(passChars);
-// console.log(passDigits);
-
-function generatePassword() {
   for (i = 0; i < passDigits; i++) {
     var randomChar = passChars[Math.floor(Math.random()*passChars.length)];
     newPass.push(randomChar)
@@ -39,9 +40,13 @@ function generatePassword() {
   }
 }
 
+// Run the generatePassword function
 generatePassword();
+
+// Removes commas from output
 var newPassword = newPass.join("");
 alert(newPassword + " is your new password!")
+
 
 // Write password to the #password input
 function writePassword() {
