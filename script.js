@@ -35,6 +35,10 @@ function generatePassword() {
   var noCapSelect = confirm("Would you like to use lowercase letters?");
   var numSelect = confirm("Would you like to use numbers?");
   var specSelect = confirm("Would you like to use special characters?");
+  if ((capSelect === false) && (noCapSelect === false) && (numSelect === false) && (specSelect === false)) {
+    capSelect = true;
+    alert("You must have at least one character type, so uppercase letters have been used.");
+  }
   if (capSelect === true) {
     passChars = passChars.concat(capChars);
   }
