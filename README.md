@@ -3,7 +3,7 @@
  
 <!-- Instructions for use -->
 Create a password of any length between 8 and 20 characters, including your choice of uppercase, lowercase, numeric, and special characters.  
-![Demo.gif](./images/password-generator_dem2.gif)  
+![Demo.gif](./images/password-generator_demo.gif)  
 
 <!-- Statement of purpose -->
 ## Purpose
@@ -19,7 +19,7 @@ Creating secure passwords is easier using this app, encouraging users toward a s
     <!-- CSS Points -->
 * CSS
     * Mouse hover event listener
-    * Commenting code
+    * Class and ID styling
 
 <!-- Browser compatiblity -->
 ## Compatiblity and Installation
