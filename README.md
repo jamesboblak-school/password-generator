@@ -25,11 +25,14 @@ Creating secure passwords is easier using this app, encouraging users toward a s
 ## Compatiblity and Installation
 This HTML website, its CSS style document, and its JavaScript file were created and tested for Chrome, but will load in any browser.  Most modern browsers should play the content of this page as intended, and without issue.
 
+<!-- Credits -->
 ## Credits:
 Berkeley Coding Boot Camp | UC Berkeley Extension, w3schools.com, developer.mozilla.org
 
+<!-- License agreement -->
 ## License
 GNU General Public License v3.0
 
+<!-- Social badges -->
 ## Badges
 ![GitHub followers](https://img.shields.io/github/followers/jamesboblak?style=social)

@@ -31,6 +31,8 @@ function generatePassword() {
     alert("Your new password will have " + passDigits + " digits.")
   } else {passDigits = prompt("Recommended values are between 8 and 128.\nHow many digits would you like?");
   }
+
+  // User selections
   var capSelect = confirm("Would you like to use uppercase letters?");
   var noCapSelect = confirm("Would you like to use lowercase letters?");
   var numSelect = confirm("Would you like to use numbers?");
@@ -39,6 +41,8 @@ function generatePassword() {
     capSelect = true;
     alert("You must have at least one character type, so uppercase letters have been used.");
   }
+
+  // Add selected character arrays to new array of possible password character options
   if (capSelect === true) {
     passChars = passChars.concat(capChars);
   }

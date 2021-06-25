@@ -13,8 +13,8 @@ body,
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #adc0d3;
 }
 
 .wrapper {
@@ -30,8 +30,9 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Card class styling */
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(215, 43%, 87%);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -72,6 +73,7 @@ header {
   clear: both;
 }
 
+/* Button class added transition-duration to slow hover animation effect */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -89,6 +91,7 @@ header {
   transition-duration: 0.4s;
 }
 
+/* Button mouse hover event listener changes font and background color */
 .btn:hover {
   background-color: #4CAF50; /* Green */
   color: white;
@@ -124,6 +127,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Smaller device screen accomodation */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -132,7 +136,7 @@ button[disabled] {
   }
 
   #password {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
