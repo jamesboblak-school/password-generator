@@ -1,9 +1,9 @@
 # password-generator
 ## easy to use!  
-![Demo .gif](./images/James-Boblak-Bio_gif3.gif)  
+ 
 <!-- Instructions for use -->
 Create a password of any length between 8 and 20 characters, including your choice of uppercase, lowercase, numeric, and special characters.  
-![Demo.gif](./images/password-generator_demo.gif)  
+![Demo.gif](./images/password-generator_dem2.gif)  
 
 <!-- Statement of purpose -->
 ## Purpose
