@@ -20,14 +20,17 @@ var passChars = [];
 //Placeholder to hold new password as an array
 var newPass = [];
 
-// User questions
-
-
-// console.log(passChars);
-// console.log(passDigits);
-
+// Generate a new password
 function generatePassword() {
-  var passDigits = prompt("How many digits would you like?")
+
+  // How many digits in password?  User input
+  var passDigits = prompt("How many digits would you like?");
+
+  // Remind user of recommended input range of rnumber of digits in password
+  if (passDigits < 8 || passDigits > 128) {
+    alert("Please enter a number between 8 and 128.");
+    passDigits = prompt("How many digits would you like?");
+  }
   var capSelect = confirm("Would you like to use uppercase letters?");
   var noCapSelect = confirm("Would you like to use lowercase letters?");
   var numSelect = confirm("Would you like to use numbers?");
@@ -47,12 +50,10 @@ function generatePassword() {
   for (i = 0; i < passDigits; i++) {
     var randomChar = passChars[Math.floor(Math.random() * passChars.length)];
     newPass.push(randomChar);
-    console.log(randomChar);
-
   }
-  console.log(newPass);
+  
+  // Removes commas from output
   newPass = newPass.join("");
-  console.log(newPass);
   return newPass;
 
 }
@@ -64,20 +65,5 @@ generateBtn.addEventListener("click", writePassword);
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-  // passwordText.value = newPassword;
 }
-
-// Removes commas from output
-//alert(newPassword + " is your new password!")
-
-
-
-
-
-
-
-
-// Run the generatePassword function
-// generatePassword();
