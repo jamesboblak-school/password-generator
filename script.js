@@ -27,9 +27,9 @@ function generatePassword() {
   var passDigits = prompt("How many digits would you like?");
 
   // Remind user of recommended input range of rnumber of digits in password
-  if (passDigits < 8 || passDigits > 128) {
-    alert("Please enter a number between 8 and 128.");
-    passDigits = prompt("How many digits would you like?");
+  if (passDigits > 8 && passDigits < 128) {
+    alert("Your new password will have " + passDigits + " digits.")
+  } else {passDigits = prompt("Recommended values are between 8 and 128.\nHow many digits would you like?");
   }
   var capSelect = confirm("Would you like to use uppercase letters?");
   var noCapSelect = confirm("Would you like to use lowercase letters?");
