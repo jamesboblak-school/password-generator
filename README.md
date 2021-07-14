@@ -1,5 +1,7 @@
 # password-generator
 ## easy to use!  
+
+[Click Here to load the app in to your browser](https://jamesboblak.github.io/password-generator/)
  
 <!-- Instructions for use -->
 Create a password of any length between 8 and 20 characters, including your choice of uppercase, lowercase, numeric, and special characters.  
